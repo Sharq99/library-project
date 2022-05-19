@@ -7,7 +7,7 @@ function MemberList(){
     
     return(
         <div>
-            <div className='mem-list'>{membersList}</div>
+            <div className='mem-list MPage'>{membersList}</div>
         </div>
     );
 }

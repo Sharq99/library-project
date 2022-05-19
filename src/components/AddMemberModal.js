@@ -30,7 +30,7 @@ function AddMemberModal() {
 
   return (
     <div>
-      <Button variant="success" className="MPage" onClick={handleShow}>
+      <Button variant="success" onClick={handleShow}>
                 Add New Member
         </Button>
       
