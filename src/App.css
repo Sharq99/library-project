@@ -30,3 +30,49 @@ body {
   cursor: pointer;
   text-align: center;
 }
+
+.image-specs {
+  width: 175px;
+  height: 275px;
+  border-radius: 5%;
+}
+
+.bookitem-specs {
+  text-align: center;
+  padding: 30px;
+  align-items: center;
+}
+
+.single-doctor:hover {
+  top: 8px;
+  right: 8px;
+}
+
+.search-bar {
+  text-align: center;
+  width: 400px;
+  height: 35px;
+  margin-bottom: 30px;
+}
+
+.sb-specs {
+  text-align: center;
+}
+
+.booklist-specs {
+  display: flex;
+  flex-direction: row;
+}
+
+.addBook-specs {
+  margin-bottom: 30px;
+}
+
+.genre-specs {
+  margin-bottom: 100px;
+}
+
+.nav-specs {
+  width: fit-content;
+  height: fit-content;
+}
