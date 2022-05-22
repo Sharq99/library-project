@@ -1,8 +1,7 @@
-.MPage {
+/* .MPage {
   text-align: center;
 }
 body {
-  /* background-color: #e0f5e4; */
   background-image: url("https://www.ppt-backgrounds.net/thumbs/books-pastel-clipart-graphic-keynote.gif");
 }
 
@@ -75,4 +74,144 @@ body {
 .nav-specs {
   width: fit-content;
   height: fit-content;
+}
+
+.font-specs {
+  text-decoration: none;
+} */
+
+.MPage {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #614033b6;
+  /* margin-left: 500px;
+  margin-right: 500px;
+  border-radius: 20px; */
+  margin-left: 520px;
+  margin-right: 520px;
+  border-radius: 20px;
+}
+
+.BookPage {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #614033b6;
+  margin-left: 440px;
+  margin-right: 440px;
+  border-radius: 20px;
+}
+
+body {
+  background-image: url("https://img.myloview.com/posters/sketch-vintage-books-seamless-pattern-or-background-sketch-education-seamless-book-for-school-literature-and-apple-illustration-400-149614705.jpg");
+}
+.myHome {
+  margin-top: 100px;
+}
+
+.myHome p {
+  background-color: rgba(173, 132, 98, 0.61);
+  border-radius: 25px;
+  margin-left: 500px;
+  margin-right: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  text-align: justify;
+  font-weight: bold;
+  border-style: ridge;
+  border-color: #684536a1;
+}
+
+.myHome h1 {
+  background-color: rgba(252, 244, 228, 0.747);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.bookie {
+  width: 90px;
+  position: absolute;
+  top: 370px;
+  right: 100px;
+}
+.mem-list {
+  width: 800px;
+  height: 300px;
+  margin-top: 100px;
+  overflow: auto;
+  max-height: calc(100vh - calc(100vh / 2));
+  margin-left: 40px;
+  border-radius: 30px;
+  border-color: #684536;
+  border-style: inset;
+  border-width: 20px;
+  background-color: rgba(255, 242, 215, 0.75);
+}
+
+.mem-font {
+  font-size: 35px;
+}
+
+.mem-item {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.image-specs {
+  width: 175px;
+  height: 275px;
+  border-radius: 5%;
+}
+
+.bookitem-specs {
+  text-align: center;
+  padding: 30px;
+  align-items: center;
+}
+
+.single-doctor:hover {
+  top: 8px;
+  right: 8px;
+}
+
+.search-bar {
+  text-align: center;
+  width: 400px;
+  height: 35px;
+  margin-bottom: 30px;
+}
+
+.sb-specs {
+  text-align: center;
+  font-weight: bolder;
+}
+.booklist-specs {
+  display: flex;
+  flex-direction: row;
+}
+
+.addBook-specs {
+  margin-bottom: 30px;
+}
+
+.genre-specs {
+  margin-bottom: 100px;
+}
+
+.nav-specs {
+  width: fit-content;
+  height: fit-content;
+}
+
+.booklist-specs {
+  display: flex;
+  flex-direction: column;
 }

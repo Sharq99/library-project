@@ -1,10 +1,10 @@
 import membersStore from '../stores/memberStore';
-import { Link, Routes, Route } from 'react-router-dom';
 import BorrowedBooksList from './BorrowedBooksList';
 import { useParams } from 'react-router-dom';
+import BorrowBookModal from './BorrowBookModal';
+import { observer } from 'mobx-react';
 
 function MemberInfo(){
-    // if you have member id {use this}
     const memberSlug = useParams().memberSlug;
     const member = membersStore.members.find(mb => mb.slug === memberSlug);
     let m1 = member.firstName;
@@ -16,15 +16,15 @@ function MemberInfo(){
     const borrowBook = () => {
         alert("Book Borrowed");
     }
-
+    // 
     return(
         <div>
-            <h1>Hello, I am Member Info</h1>
             <h1>{result}</h1>
             <h1>{member.membership}</h1>
             <h3>Borrowed Book</h3>
-            <BorrowedBooksList key={borrowedBooks} borrowedBooks={borrowedBooks}/>
-            <button onClick={() => borrowBook()}>Borrow Book</button>
+            <BorrowedBooksList borrowedBooks={borrowedBooks} member={member}/>
+            {/* <button onClick={() => borrowBook()}>Borrow Book</button> */}
+            <BorrowBookModal key={borrowedBooks} borrowedBooks={borrowedBooks} member={member} />
         </div>
     );
 }

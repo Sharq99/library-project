@@ -1,32 +1,17 @@
 import { observer } from 'mobx-react';
 import bookStore from '../stores/bookStore';
-import BookItem from './BookItem';
 import { useState } from 'react';
+import BModalitem from './BModalitem';
 
-function BookList(){
-    const [query, setQuery] = useState("");
+function BModalList({ member, handleClose }){
     const [genre, setGenre] = useState("");
 
     const booksList = bookStore.books
-        .filter(
-            (book) => (!genre) ? (book.title.toLowerCase().includes(query.toLowerCase())) :(book.title.toLowerCase().includes(query.toLowerCase())&& book.genres.includes(genre)))
-            .map((book) => <BookItem key={book._id} book={book} />);
+        .filter((book) => book.genres.includes(genre)).map((book) => <BModalitem key={book._id} book={book} member={member} handleClose={handleClose}/>);
 
-             
-            
     
     return(
-        <div>
-            <div className='sb-specs'>
-                <input className='search-bar'
-                  type="search"
-                  placeholder="Search Book"
-                  aria-label="Search"
-                  aria-describedby="search-addon"
-                  onChange={(e) => setQuery(e.target.value)}
-                />
-            </div>
-           
+        <div>           
             <div className='sb-specs'>
                 Genre Type:
                 <select 
@@ -50,10 +35,9 @@ function BookList(){
                     <option value="Mystery">Mystery</option>
                 </select>
             </div>
-
-             <div className="booklist-specs">{booksList}</div> {/* className='mem-list MPage' */}
+             <div className="booklist-specs">{booksList}</div>
         </div>
     );
 }
 
-export default observer(BookList);
+export default observer(BModalList);

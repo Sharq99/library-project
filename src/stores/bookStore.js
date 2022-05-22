@@ -49,6 +49,19 @@ class BookStore {
         }
       };
 
+    returnBook = async (bookId, memberId) => {
+        // const book = this.books.find(b => b._id === bookID);
+        // book.available = true;
+        // const removedbook = book.borrowedBy.filter((bID => bID !== memberID));
+        // book.borrowedBy = removedbook;
+
+        try {
+            await axios.put(`https://library-borrow-system.herokuapp.com/api/books/${bookId}/return/${memberId}`);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
 }
 
 const bookStore = new BookStore();

@@ -51,6 +51,14 @@ class MemberStore {
         }
       };
 
+    borrowBook = async (bookId, memberId) => {
+        try {
+            await axios.put(`https://library-borrow-system.herokuapp.com/api/books/${bookId}/borrow/${memberId}`);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
 }
 
 const membersStore = new MemberStore();

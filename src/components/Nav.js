@@ -3,48 +3,40 @@ import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
-    // <nav
-    //   className="navbar navbar-expand-lg bg-secondary text-uppercase "
-    //   id="mainNav"
-    // >
-    //   <div className="container">
-    //     <NavLink className="navbar-brand" to="/">
-    //       Home
-    //     </NavLink>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <NavLink to="/">Home</NavLink>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <NavLink
+                className="nav-link py-3 px-0 px-lg-3 rounded"
+                to="/member-page"
+              >
+                Members
+              </NavLink>
+            </li>
 
-    //     <div className="collapse navbar-collapse" id="navbarResponsive">
-    //       <ul className="navbar-nav ms-auto">
-    //         <li className="nav-item mx-0 mx-lg-1">
-    //           <NavLink className="nav-link py-3 px-0 px-lg-3 rounded" to="/MemberPage">
-    //             Members
-    //           </NavLink>
-    //         </li>
-    //         <li className="nav-item mx-0 mx-lg-1">
-    //           <NavLink className="nav-link py-3 px-0 px-lg-3 rounded" to="/BookPage">
-    //             Books
-    //           </NavLink>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </div>
-    // </nav>
-
-    <nav
-      className="nav-specs"
-      id="mainNav"
-    >
-      <div className="container">
-        <NavLink to="/">
-          Home
-        </NavLink>
-
-        <div id="navbarResponsive">
-          <NavLink className="nav-link py-3 px-0 px-lg-3 rounded" to="/member-page">
-              Members
-          </NavLink>
-          <NavLink className="nav-link py-3 px-0 px-lg-3 rounded" to="/book-page">
-              Books
-          </NavLink>
+            <li>
+              <NavLink
+                className="nav-link py-3 px-0 px-lg-3 rounded"
+                to="/book-page"
+              >
+                Books
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
