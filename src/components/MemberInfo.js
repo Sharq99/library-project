@@ -10,7 +10,9 @@ function MemberInfo(){
     let m1 = member.firstName;
     let m2 = member.lastName;
     let result = m1.concat(" ",m2);
+    console.log("member: "+member[1])
     const borrowedBooks = member.currentlyBorrowedBooks;
+    console.log("borrowedBooks: " + borrowedBooks)
     
     return(
         <div className='memINFO'>

@@ -33,7 +33,7 @@ function BModalitem({ book, member, handleClose }){
         <div className='bookitem-specs'>
                 <img className='image-specs' src={book.image} alt={book.title}/>
                 <h5 className='font-specs'>{book.title}</h5>
-                <button onClick={() => borrowBook()}>Borrow Book</button>
+                <button className="br-btn" onClick={() => borrowBook()}>Borrow Book</button>
         </div>
     );
 }
