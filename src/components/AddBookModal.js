@@ -24,6 +24,10 @@ function AddBookModal() {
         setAddBook({ ...addBook, [event.target.name]: event.target.value, });
     }
 
+    // const handleGenre = (event) => {
+    //     setAddBook({... addBook, [event.target.name]: push(event.target.value), });
+    // }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         bookStore.createBook(addBook);
@@ -64,6 +68,26 @@ function AddBookModal() {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Choose Genre</Form.Label>
+                        <Form.Select aria-label="Floating label select example" name="genres" onChange={handleChange}>
+                            <option selected>Select A Genre</option>
+                            <option value="Action">Action</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Self-Help">Self-Help</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Suspense">Suspense</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Business">Business</option>
+                            <option value="Entrepreneurship">Entrepreneurship</option>
+                            <option value="Crime">Crime</option>
+                            <option value="Mystery">Mystery</option>
+                         </Form.Select>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Book Image URL</Form.Label>
                         <Form.Control
                             onChange={handleChange}
@@ -84,3 +108,20 @@ function AddBookModal() {
 }
 
 export default AddBookModal;
+
+
+
+// <Form.Control
+// onChange={handleChange}
+// type="select"
+// placeholder="Book Image URL"
+// autoFocus
+// name="genre"
+// {   <select 
+//         className='genre-specs'
+//         aria-label="Default select example"
+//     >
+//         <option value="">All</option>
+        
+//     </select>}
+// />

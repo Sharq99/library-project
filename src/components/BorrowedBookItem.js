@@ -5,7 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 function BorrowedBookItem({ book, member }){
 
     const returnBook = () => {
-        bookStore.returnBook(book._id, member.id);
+        bookStore.returnBook(book, member._id);
         alert("Book Returned");
     }
 
@@ -14,7 +14,7 @@ function BorrowedBookItem({ book, member }){
                 {/* <img className='image-specs' src={book.image} alt={book.title}/>
                 <h5 className='font-specs'>{book.title}</h5> */}
                 <h5 className='font-specs'>{book}</h5>
-                <button onClick={() => returnBook()}>Return Book</button>
+                <button className='rtn-btn' onClick={() => returnBook()}>Return Book</button>
         </div>
     );
 }

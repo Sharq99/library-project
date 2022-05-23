@@ -14,10 +14,13 @@ function BModalitem({ book, member, handleClose }){
             } else{
                     if(member.membership === "platinum" && platinum <= 5 && platinum !== 0){
                         membersStore.borrowBook(book._id, member._id);
+                        bookStore.bookborrowed(book._id, member._id);
                     } else if(member.membership === "gold" && gold <= 3 && gold !== 0){
                         membersStore.borrowBook(book._id, member._id);
+                        bookStore.bookborrowed(book._id, member._id);
                     } else if(member.membership === "silver" && silver <= 2 && silver !== 0){
                         membersStore.borrowBook(book._id, member._id);
+                        bookStore.bookborrowed(book._id, member._id);
                     } else {alert("You Reached Your Borrowing Limit")}
                 }
         } else{alert("OOOPS!!!!!!! Book Not Available")}

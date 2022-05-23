@@ -4,12 +4,13 @@ function Home() {
   return (
     <div className="myHome">
       <h1>༻⚜༺ Welcome To the Coded Library ༻⚜༺</h1>
-      <div>
+    <div>
         <p>
           {" "}
-          thrkjghkdjghdkjfghdfghk<br></br> skjdfhksjdfhksdjfhskdfl
-          <br></br> skjdfhksjdfhksdjfhskdfl
-          <br></br> skjdfhksjdfhksdjfhskdfl
+          Welcome to Coded Library <br></br>The ideal destination for a
+          librarian!
+          <br></br> Managing your work has never been easier!
+          <br></br> Navigate through the navbar to start your journey!
         </p>
         <img
           className="bookie"

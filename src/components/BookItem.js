@@ -7,9 +7,9 @@ function BookItem({ book }){
 
     return(
         <div className='bookitem-specs'>
-            <Link to={`/book-details/${book.slug}`}>
+            <Link to={`/book-details/${book.slug}`} className='bItem-specs'>
                 <img className='image-specs' src={book.image} alt={book.title}/>
-                <h5 className='font-specs'>{book.title}</h5>
+                <h5>{book.title}</h5>
                 {/* <button onClick={() => bDetails()}>Details</button> */}
             </Link>
         </div>

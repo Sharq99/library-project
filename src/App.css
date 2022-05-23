@@ -75,9 +75,22 @@ body {
   width: fit-content;
   height: fit-content;
 }
-
-.font-specs {
+*/
+/* .font-specs {
   text-decoration: none;
+  color: violet;
+} */
+
+/* .MPage {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #614033b6;
+  margin-left: 500px;
+  margin-right: 500px;
+  border-radius: 20px;
+  margin-left: 520px;
+  margin-right: 520px;
+  border-radius: 20px;
 } */
 
 .MPage {
@@ -87,8 +100,8 @@ body {
   /* margin-left: 500px;
   margin-right: 500px;
   border-radius: 20px; */
-  margin-left: 520px;
-  margin-right: 520px;
+  margin-left: 450px;
+  margin-right: 450px;
   border-radius: 20px;
 }
 
@@ -117,7 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   color: antiquewhite;
-  text-align: justify;
+  /* text-align: justify; */
+  text-align: center;
   font-weight: bold;
   border-style: ridge;
   border-color: #684536a1;
@@ -135,10 +149,24 @@ body {
   width: 90px;
   position: absolute;
   top: 370px;
-  right: 100px;
+  right: 670px;
 }
-.mem-list {
+/* .mem-list {
   width: 800px;
+  height: 300px;
+  margin-top: 100px;
+  overflow: auto;
+  max-height: calc(100vh - calc(100vh / 2));
+  margin-left: 40px;
+  border-radius: 30px;
+  border-color: #684536;
+  border-style: inset;
+  border-width: 20px;
+  background-color: rgba(255, 242, 215, 0.75);
+} */
+
+.mem-list {
+  width: 460px;
   height: 300px;
   margin-top: 100px;
   overflow: auto;
@@ -175,6 +203,12 @@ body {
   text-align: center;
   padding: 30px;
   align-items: center;
+}
+
+.bItem-specs {
+  color: #23272f;
+  outline: none;
+  text-decoration: none;
 }
 
 .single-doctor:hover {
@@ -214,4 +248,97 @@ body {
 .booklist-specs {
   display: flex;
   flex-direction: column;
+}
+
+.memINFO {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #614033b6;
+  margin-left: 440px;
+  margin-right: 440px;
+  border-radius: 20px;
+}
+
+.memINFO h3 {
+  margin-top: 20px;
+  margin-bottom: -100px;
+}
+
+.BBModal {
+  margin-bottom: 20px;
+}
+
+.memInfobook-list {
+  width: 480px;
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  overflow: auto;
+  max-height: calc(100vh - calc(100vh / 2));
+  margin-left: 40px;
+  border-radius: 30px;
+  border-color: #684536;
+  border-style: inset;
+  border-width: 20px;
+  background-color: rgba(255, 242, 215, 0.75);
+}
+
+.bookDetail {
+  text-align: center;
+  margin-top: 15px;
+  background-color: #614033b6;
+  margin-left: 440px;
+  margin-right: 440px;
+  border-radius: 20px;
+}
+
+.CBB-list {
+  margin-top: 20px;
+  margin-bottom: -100px;
+}
+
+/* Return Btn */
+
+.rtn-btn {
+  appearance: button;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #fff, #f8eedb);
+  border: 0 solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #482307;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 35px;
+  margin: 0;
+  outline: 2px solid transparent;
+  /* padding: 1rem 1.5rem; */
+  text-align: center;
+  text-transform: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1),
+    0px 2px 2px rgba(81, 41, 10, 0.2);
+  width: 120px;
+  height: 40px;
+}
+
+.rtn-btn:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.rtn-btn:focus {
+  box-shadow: rgba(72, 35, 7, 0.46) 0 0 0 4px,
+    -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
 }

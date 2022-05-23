@@ -20,13 +20,13 @@ function BookDetails(){
     }
 
     return(
-        <div >
+        <div className='bookDetail'>
             <img className="image-specs" src={book.image} alt={"Book: "+book.title}></img>
-            <h1>{book.title}</h1>
-            <h1>{book.author}</h1>
-            <h1>{"Book Gener/s: " + bookGenres}</h1>
-            <h1>{"Book Availability: " + checkAvailability()}</h1>
-            <h1>{"Currently Borrowed By: "}</h1>
+            <h3>{book.title}</h3>
+            <h3>{book.author}</h3>
+            <h3>{"Book Gener/s: " + bookGenres}</h3>
+            <h3>{"Book Availability: " + checkAvailability()}</h3>
+            <h3 className='CBB-list'>{"Currently Borrowed By: "}</h3>
             <MemberList key ={members._id} members={members}/>
         </div>
     );

@@ -34,8 +34,8 @@ function BookList(){
                     aria-label="Default select example"
                     onChange={(e) => setGenre(e.target.value)}
                 >
-                    <option value="" >All</option>
-                    <option value="Action" selected>Action</option>
+                    <option value="" selected>All</option>
+                    <option value="Action">Action</option>
                     <option value="Fantasy">Fantasy</option>
                     <option value="Sci-Fi">Sci-Fi</option>
                     <option value="Romance">Romance</option>

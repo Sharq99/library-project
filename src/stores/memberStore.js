@@ -19,8 +19,18 @@ class MemberStore {
         }
     }
 
-    generateID = (length) => {
+    generateIDN = (length) => {
         const characters ='0123456789';
+        let result = '';
+        const charactersLength = characters.length;
+        for ( let i = 0; i < length; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+
+    generateIDL = (length) => {
+        const characters ='abcdefghijklmnopqrstuvwxyz0123456789';
         let result = '';
         const charactersLength = characters.length;
         for ( let i = 0; i < length; i++ ) {
@@ -36,7 +46,7 @@ class MemberStore {
         let result = s1.concat("-",s2);
 
         // member._id = this.generateID(24);
-        member._id = "628514d5b8273a86534c95b"+this.generateID(1);
+        member._id = this.generateIDL(24); //+this.generateIDL(1); //628514d5b8273a86534c95b
         console.log("id: "+member._id);
         member.slug = result;
         console.log("slug: "+member.slug);

@@ -10,15 +10,9 @@ function BorrowBookModal({ member }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     bookStore.createBook(addBook);
-    //     handleClose();
-    // }
-
   return (
     <div>
-      <Button variant="success" onClick={handleShow}>
+      <Button className='BBModal' variant="success" onClick={handleShow}>
                 Borrow Book
         </Button>
       
@@ -31,8 +25,8 @@ function BorrowBookModal({ member }) {
                 <BModalList member={member} handleClose={handleClose}/>
 
 
-                <Button variant="primary" type="submit">
-                    Add Book
+                <Button variant="secondary" type="submit" onClick={handleClose}>
+                    cancel
                 </Button>
             </Modal.Body>
         </Modal>

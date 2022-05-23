@@ -12,19 +12,13 @@ function MemberInfo(){
     let result = m1.concat(" ",m2);
     const borrowedBooks = member.currentlyBorrowedBooks;
     
-
-    const borrowBook = () => {
-        alert("Book Borrowed");
-    }
-    // 
     return(
-        <div>
+        <div className='memINFO'>
             <h1>{result}</h1>
-            <h1>{member.membership}</h1>
+            <h1>{member.membership.toUpperCase()}</h1>
             <h3>Borrowed Book</h3>
             <BorrowedBooksList borrowedBooks={borrowedBooks} member={member}/>
-            {/* <button onClick={() => borrowBook()}>Borrow Book</button> */}
-            <BorrowBookModal key={borrowedBooks} borrowedBooks={borrowedBooks} member={member} />
+            <BorrowBookModal key={borrowedBooks} borrowedBooks={borrowedBooks} member={member} />    
         </div>
     );
 }

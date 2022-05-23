@@ -7,7 +7,7 @@ function MemberItem({ member }){
 
     return(
         <div className="mem-font">
-            <Link to={`/member-info/${member.slug}`}>{result}</Link>
+            <Link to={`/member-info/${member.slug}`} className='bItem-specs'>{result} </Link>
         </div>
     );
 }
