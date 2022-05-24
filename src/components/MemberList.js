@@ -2,16 +2,12 @@ import { observer } from 'mobx-react';
 import membersStore from '../stores/memberStore';
 import MemberItem from './MemberItem';
 
-// function MemberList(){
 function MemberList({ members }){
-    // const membersList = membersStore.members.map((member) => <MemberItem key={member._id} member={member} />);
     const membersList = members.map((member) => <MemberItem key={member._id} member={member} />);
     
     return(
         <div>
-            <div className='mem-list MPage'>
-            {membersList}
-            </div>
+            <div className='mem-list MPage'>{membersList}</div>
         </div>
     );
 }

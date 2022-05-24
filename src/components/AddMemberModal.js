@@ -72,18 +72,6 @@ function AddMemberModal() {
                 <option value="silver">Silver</option>
               </Form.Select>
             </Form.Group>
-
-            {/* <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Membership</Form.Label>
-              <Form.Control
-                onChange={handleChange}
-                type="text"
-                placeholder="Membership"
-                autoFocus
-                name="membership"
-              />
-            </Form.Group> */}
-
             <Button variant="primary" type="submit">
               Add Member
             </Button>

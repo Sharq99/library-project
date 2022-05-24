@@ -1,116 +1,19 @@
-/* .MPage {
-  text-align: center;
-}
-body {
-  background-image: url("https://www.ppt-backgrounds.net/thumbs/books-pastel-clipart-graphic-keynote.gif");
-}
-
-.mem-list {
-  width: 800px;
-  height: 300px;
-  background-color: white;
-  margin-top: 30px;
-  overflow: auto;
-  max-height: calc(100vh - calc(100vh / 2));
-  margin-left: 560px;
-  border-radius: 25px;
-  border-color: #7cc7d8;
-  border-style: inset;
-  border-width: 20px;
-  background-image: url("./components/pics/back.png");
-}
-
-.mem-item {
-  margin-left: 15px;
-  margin-bottom: 5px;
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.image-specs {
-  width: 175px;
-  height: 275px;
-  border-radius: 5%;
-}
-
-.bookitem-specs {
-  text-align: center;
-  padding: 30px;
-  align-items: center;
-}
-
-.single-doctor:hover {
-  top: 8px;
-  right: 8px;
-}
-
-.search-bar {
-  text-align: center;
-  width: 400px;
-  height: 35px;
-  margin-bottom: 30px;
-}
-
-.sb-specs {
-  text-align: center;
-}
-
-.booklist-specs {
-  display: flex;
-  flex-direction: row;
-}
-
-.addBook-specs {
-  margin-bottom: 30px;
-}
-
-.genre-specs {
-  margin-bottom: 100px;
-}
-
-.nav-specs {
-  width: fit-content;
-  height: fit-content;
-}
-*/
-/* .font-specs {
-  text-decoration: none;
-  color: violet;
-} */
-
-/* .MPage {
-  text-align: center;
-  margin-top: 15px;
-  background-color: #614033b6;
-  margin-left: 500px;
-  margin-right: 500px;
-  border-radius: 20px;
-  margin-left: 520px;
-  margin-right: 520px;
-  border-radius: 20px;
-} */
-
 .MPage {
   text-align: center;
   margin-top: 15px;
   background-color: #614033b6;
-  /* margin-left: 500px;
-  margin-right: 500px;
-  border-radius: 20px; */
   margin-left: 450px;
   margin-right: 450px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .BookPage {
   text-align: center;
   margin-top: 15px;
   background-color: #614033b6;
-  margin-left: 440px;
-  margin-right: 440px;
+  margin-left: 200px;
+  margin-right: 200px;
   border-radius: 20px;
 }
 
@@ -130,7 +33,6 @@ body {
   justify-content: center;
   align-items: center;
   color: antiquewhite;
-  /* text-align: justify; */
   text-align: center;
   font-weight: bold;
   border-style: ridge;
@@ -151,24 +53,11 @@ body {
   top: 370px;
   right: 670px;
 }
-/* .mem-list {
-  width: 800px;
-  height: 300px;
-  margin-top: 100px;
-  overflow: auto;
-  max-height: calc(100vh - calc(100vh / 2));
-  margin-left: 40px;
-  border-radius: 30px;
-  border-color: #684536;
-  border-style: inset;
-  border-width: 20px;
-  background-color: rgba(255, 242, 215, 0.75);
-} */
 
 .mem-list {
   width: 460px;
-  height: 300px;
-  margin-top: 100px;
+  height: 350px;
+  margin-top: 60px;
   overflow: auto;
   max-height: calc(100vh - calc(100vh / 2));
   margin-left: 40px;
@@ -229,7 +118,7 @@ body {
 }
 .booklist-specs {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 .addBook-specs {
@@ -246,16 +135,34 @@ body {
 }
 
 .booklist-specs {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "c1 c2 c3"
+    "c1 c2 c3";
+}
+
+.c1 {
+  grid-area: c1;
+}
+.c2 {
+  grid-area: c2;
+}
+.c3 {
+  grid-area: c3;
 }
 
 .memINFO {
   text-align: center;
   margin-top: 15px;
   background-color: #614033b6;
-  margin-left: 440px;
-  margin-right: 440px;
+  margin-left: 390px;
+  margin-right: 390px;
   border-radius: 20px;
 }
 
@@ -269,8 +176,8 @@ body {
 }
 
 .memInfobook-list {
-  width: 480px;
-  height: 300px;
+  width: 580px;
+  height: 400px;
   margin-top: 100px;
   margin-bottom: 50px;
   overflow: auto;
@@ -281,6 +188,21 @@ body {
   border-style: inset;
   border-width: 20px;
   background-color: rgba(255, 242, 215, 0.75);
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "m1 m2"
+    "m1 m2";
+}
+.m1 {
+  grid-area: m1;
+}
+.m2 {
+  grid-area: m2;
 }
 
 .bookDetail {
@@ -309,7 +231,6 @@ body {
   color: #482307;
   column-gap: 1rem;
   cursor: pointer;
-  /* display: flex; */
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -318,7 +239,6 @@ body {
   line-height: 35px;
   margin: 0;
   outline: 2px solid transparent;
-  /* padding: 1rem 1.5rem; */
   text-align: center;
   text-transform: none;
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -357,7 +277,6 @@ body {
   color: #f8eedb;
   column-gap: 1rem;
   cursor: pointer;
-  /* display: flex; */
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -366,7 +285,6 @@ body {
   line-height: 35px;
   margin: 0;
   outline: 2px solid transparent;
-  /* padding: 1rem 1.5rem; */
   text-align: center;
   text-transform: none;
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);

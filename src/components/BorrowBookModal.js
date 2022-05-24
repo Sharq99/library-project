@@ -16,7 +16,7 @@ function BorrowBookModal({ member }) {
                 Borrow Book
         </Button>
       
-        <Modal show={show} onHide={handleClose}>
+        <Modal size="lg" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Select The Book You Want to Borrow</Modal.Title>
             </Modal.Header>

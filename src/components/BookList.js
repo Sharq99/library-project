@@ -50,8 +50,8 @@ function BookList(){
                     <option value="Mystery">Mystery</option>
                 </select>
             </div>
-
-             <div className="booklist-specs">{booksList}</div> {/* className='mem-list MPage' */}
+            <div className='booklist-specs'>{booksList}</div>
+             
         </div>
     );
 }

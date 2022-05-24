@@ -11,10 +11,9 @@ function BorrowedBookItem({ book, member }){
 
     return(
         <div className='bookitem-specs'>
-                {/* <img className='image-specs' src={book.image} alt={book.title}/>
-                <h5 className='font-specs'>{book.title}</h5> */}
-                <h5 className='font-specs'>{book}</h5>
-                <button className='rtn-btn' onClick={() => returnBook()}>Return Book</button>
+            <img className='image-specs' src={book.image} alt={book.title}/>
+            <h5 className='font-specs'>{book.title}</h5>
+            <button className='rtn-btn' onClick={() => returnBook()}>Return Book</button>
         </div>
     );
 }

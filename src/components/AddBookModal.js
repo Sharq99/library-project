@@ -6,13 +6,10 @@ function AddBookModal() {
   const [count, setCount] = useState(0);
   const [show, setShow] = useState(false);
   const [addBook, setAddBook] = useState({
-    // "_id": '',
     author: "",
     title: "",
     genres: ["Fantasy"],
     available: true,
-    // "borrowedBy": [],
-    // "slug": '',
     image: "",
   });
 
@@ -26,17 +23,14 @@ function AddBookModal() {
 
   const handleGenre = (event) => {
     const bookarr = addBook;
+    
     if (count === 0) {
       bookarr.genres.pop();
       setCount(count + 1);
     }
-    bookarr.genres.push(event.target.value);
 
+    bookarr.genres.push(event.target.value);
     setAddBook(bookarr);
-    // setAddBook({
-    //   ...addBook,
-    //   [event.target.name]: addBook.genres.push(event.target.value),
-    // });
   };
 
   const handleSubmit = (event) => {
@@ -123,18 +117,3 @@ function AddBookModal() {
 }
 
 export default AddBookModal;
-
-// <Form.Control
-// onChange={handleChange}
-// type="select"
-// placeholder="Book Image URL"
-// autoFocus
-// name="genre"
-// {   <select
-//         className='genre-specs'
-//         aria-label="Default select example"
-//     >
-//         <option value="">All</option>
-
-//     </select>}
-// />
