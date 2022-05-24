@@ -5,7 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 function BorrowedBookItem({ book, member }){
 
     const returnBook = () => {
-        bookStore.returnBook(book, member._id);
+        bookStore.returnBook(book._id, member._id);
         alert("Book Returned");
     }
 
